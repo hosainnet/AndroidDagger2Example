@@ -20,7 +20,7 @@ public class ServiceModule {
 
     @Provides
     @Singleton
-    public ApiService providesNetworkService(RetrofitService retrofitService) {
+    public ApiService providesApiService(RetrofitService retrofitService) {
         Retrofit retrofit = retrofitService.buildRedditRetrofit();
         return retrofit.create(ApiService.class);
     }
